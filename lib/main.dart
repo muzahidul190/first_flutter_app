@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
@@ -30,30 +30,56 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('This is edited title.'),
+        title: const Text('This is edited title...'),
       ),
-      body: Container(
-        padding: const EdgeInsets.only(top: 30),
-        margin: const EdgeInsets.all(100),
-        decoration: const BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.only(
-            bottomRight: Radius.circular(10),
-            topLeft: Radius.circular(10),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                decoration: const BoxDecoration(
+                  color: Colors.green,
+                ),
+              ),
+              const Text('Hi'),
+              Container(
+                height: 100,
+                width: 100,
+                decoration: const BoxDecoration(
+                  color: Colors.teal,
+                ),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                decoration: const BoxDecoration(
+                  color: Colors.blue,
+                ),
+              )
+            ],
           ),
-          //border: Border({})
-        ),
-        height: 100,
-        width: 200,
-        child: const Text(
-          'hello flutter',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 25,
-            color: Colors.white,
-            //background: Paint(Colors.accents,),
+          Column(
+            children: [
+              const Text('Hi'),
+              Container(
+                height: 100,
+                width: 100,
+                decoration: const BoxDecoration(
+                  color: Colors.cyan,
+                ),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                decoration: const BoxDecoration(
+                  color: Colors.teal,
+                ),
+              ),
+            ],
           ),
-        ),
+        ],
       ),
     );
   }
