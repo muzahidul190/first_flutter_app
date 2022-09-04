@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,54 +29,72 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('This is edited title...'),
+        title: const Text('This is homepage'),
       ),
-      body: Column(
+      body: ListView(
         children: [
-          Row(
-            children: [
-              Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.green,
-                ),
-              ),
-              const Text('Hi'),
-              Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.teal,
-                ),
-              ),
-              Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.blue,
-                ),
-              )
-            ],
+          Text('0'),
+          Text('1'),
+          Container(
+            height: 100,
+            width: 50,
+            color: Colors.amber,
           ),
-          Column(
-            children: [
-              const Text('Hi'),
-              Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.cyan,
-                ),
-              ),
-              Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.teal,
-                ),
-              ),
-            ],
+          Text('0'),
+          Text('1'),
+          Container(
+            height: 100,
+            width: 50,
+            color: Colors.amber,
+          ),
+          Text('0'),
+          Text('1'),
+          Container(
+            height: 100,
+            width: 50,
+            color: Colors.amber,
+          ),
+          Text('0'),
+          Text('1'),
+          Container(
+            height: 100,
+            width: 50,
+            color: Colors.amber,
+          ),
+          Text('0'),
+          Text('1'),
+          Container(
+            height: 100,
+            width: 50,
+            color: Colors.amber,
+          ),
+          Text('0'),
+          Text('1'),
+          Container(
+            height: 100,
+            width: 50,
+            color: Colors.amber,
+          ),
+          Text('0'),
+          Text('1'),
+          Container(
+            height: 100,
+            width: 50,
+            color: Colors.amber,
+          ),
+          Text('0'),
+          Text('1'),
+          Container(
+            height: 100,
+            width: 50,
+            color: Colors.amber,
+          ),
+          Text('0'),
+          Text('1'),
+          Container(
+            height: 100,
+            width: 50,
+            color: Colors.amber,
           ),
         ],
       ),
