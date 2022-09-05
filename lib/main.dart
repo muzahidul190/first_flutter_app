@@ -1,4 +1,4 @@
-import 'package:first_flutter_app/pageTwo.dart';
+import 'package:first_flutter_app/page_two.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('This is homepage'),
+        title: const Text('This is my homepage'),
       ),
       drawer: Drawer(
         child: Column(
