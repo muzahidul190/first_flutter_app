@@ -51,6 +51,19 @@ class MyHomePage extends StatelessWidget {
               leading: Icon(Icons.next_plan),
               title: Text('Page Two'),
             ),
+            const ListTile(
+              leading: Icon(Icons.abc),
+              title: Text('Item new'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.bluetooth),
+              title: Text('Bluetooth'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.wifi),
+              title: Text('Wifi'),
+            ),
+
           ],
         ),
       ),
