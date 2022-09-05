@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/pageTwo.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'My Application page',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: const MyHomePage(),
     );
@@ -31,66 +32,95 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('This is homepage'),
       ),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            AppBar(
+              title: const Text('Choose'),
+              automaticallyImplyLeading: false,
+            ),
+            const ListTile(
+              leading: Icon(Icons.list),
+              title: Text('Item one'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.add),
+              title: Text('Add item'),
+            ),
+            const ListTile(
+              leading: Icon(Icons.next_plan),
+              title: Text('Page Two'),
+            ),
+          ],
+        ),
+      ),
       body: ListView(
         children: [
-          Text('0'),
-          Text('1'),
+          const Text('0'),
+          const Text('1'),
           Container(
             height: 100,
             width: 50,
             color: Colors.amber,
           ),
-          Text('0'),
-          Text('1'),
+          const Text('0'),
+          const Text('1'),
           Container(
             height: 100,
             width: 50,
             color: Colors.amber,
           ),
-          Text('0'),
-          Text('1'),
+          ElevatedButton(
+            child: const Text('Page 2'),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const MyHomePage2()));
+            },
+          ),
+          const Text('0'),
+          const Text('1'),
           Container(
             height: 100,
             width: 50,
             color: Colors.amber,
           ),
-          Text('0'),
-          Text('1'),
+          const Text('0'),
+          const Text('1'),
           Container(
             height: 100,
             width: 50,
             color: Colors.amber,
           ),
-          Text('0'),
-          Text('1'),
+          const Text('0'),
+          const Text('1'),
           Container(
             height: 100,
             width: 50,
             color: Colors.amber,
           ),
-          Text('0'),
-          Text('1'),
+          const Text('0'),
+          const Text('1'),
           Container(
             height: 100,
             width: 50,
             color: Colors.amber,
           ),
-          Text('0'),
-          Text('1'),
+          const Text('0'),
+          const Text('1'),
           Container(
             height: 100,
             width: 50,
             color: Colors.amber,
           ),
-          Text('0'),
-          Text('1'),
+          const Text('0'),
+          const Text('1'),
           Container(
             height: 100,
             width: 50,
             color: Colors.amber,
           ),
-          Text('0'),
-          Text('1'),
+          const Text('0'),
+          const Text('1'),
           Container(
             height: 100,
             width: 50,
