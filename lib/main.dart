@@ -1,4 +1,5 @@
 import 'package:first_flutter_app/page_two.dart';
+import 'package:first_flutter_app/page_three.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -90,6 +91,9 @@ class MyHomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const MyHomePage2()));
             },
           ),
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const pageThree()));
+          }, child: const Text('Page Three')),
           const Text('0'),
           const Text('1'),
           Container(

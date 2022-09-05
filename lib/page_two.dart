@@ -1,20 +1,6 @@
+import 'package:first_flutter_app/page_three.dart';
+import 'package:first_flutter_app/main.dart';
 import 'package:flutter/material.dart';
-
-class PageTwo extends StatelessWidget {
-  const PageTwo({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'My Application page',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage2(),
-    );
-  }
-}
 
 class MyHomePage2 extends StatelessWidget {
   const MyHomePage2({
@@ -77,11 +63,19 @@ class MyHomePage2 extends StatelessWidget {
           Center(
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const MyHomePage()));
               },
               child: const Text('Go to HomePage'),
             ),
           ),
+          Center(
+            child: ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const pageThree()));
+              },
+              child: const Text('Page Three'),
+            ),
+          )
         ],
       ),
     );
