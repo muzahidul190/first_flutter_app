@@ -28,7 +28,38 @@ List<String> theList = [
   'Item Three',
   'Item Four',
   'Item Five',
-  'Item Six'
+  'Item Six',
+  'Item One',
+  'Item Two',
+  'Item Three',
+  'Item Four',
+  'Item Five',
+  'Item Six',
+  'Item One',
+  'Item Two',
+  'Item Three',
+  'Item Four',
+  'Item Five',
+  'Item Six',
+  'Item One',
+  'Item Two',
+  'Item Three',
+  'Item Four',
+  'Item Five',
+  'Item Six',
+  'Item One',
+  'Item Two',
+  'Item Three',
+  'Item Four',
+  'Item Five',
+  'Item Six',
+  'Item One',
+  'Item Two',
+  'Item Three',
+  'Item Four',
+  'Item Five',
+  'Item Six',
+  'Item Seven'
 ];
 
 class MyHomePage extends StatelessWidget {
@@ -77,7 +108,7 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: ListView(
+      body: Column(
         children: [
           ElevatedButton(
             child: const Text('Page 2'),
@@ -86,20 +117,37 @@ class MyHomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const MyHomePage2()));
             },
           ),
-          ListView.separated(
-            scrollDirection: Axis.vertical,
-            shrinkWrap: true,
-            itemBuilder: (context, index) => Text(theList[index]),
-            separatorBuilder: (context, index) => const Divider(
-              color: Colors.teal,
+          Expanded(
+            child: ListView.separated(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              itemBuilder: (context, index) => Text(theList[index]),
+              separatorBuilder: (context, index) => const Divider(
+                color: Colors.teal,
+              ),
+              itemCount: theList.length,
             ),
-            itemCount: theList.length,
           ),
           ElevatedButton(
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const pageThree()));
               },
               child: const Text('Page Three')
+          ),
+          Container(
+            height: 30,
+            //padding: Padding(),
+            decoration: const BoxDecoration(
+              color: Colors.deepOrangeAccent,
+
+            ),
+            child: const Center(
+              child: Text(
+                'This is test text',
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),),
           ),
         ],
       ),
