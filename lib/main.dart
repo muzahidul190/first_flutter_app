@@ -22,6 +22,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
+List<String> theList = [
+  'Item One',
+  'Item Two',
+  'Item Three',
+  'Item Four',
+  'Item Five',
+  'Item Six'
+];
+
 class MyHomePage extends StatelessWidget {
   const MyHomePage({
     Key? key,
@@ -70,20 +79,6 @@ class MyHomePage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          const Text('0'),
-          const Text('1'),
-          Container(
-            height: 100,
-            width: 50,
-            color: Colors.amber,
-          ),
-          const Text('0'),
-          const Text('1'),
-          Container(
-            height: 100,
-            width: 50,
-            color: Colors.amber,
-          ),
           ElevatedButton(
             child: const Text('Page 2'),
             onPressed: () {
@@ -91,57 +86,20 @@ class MyHomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const MyHomePage2()));
             },
           ),
-          ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const pageThree()));
-          }, child: const Text('Page Three')),
-          const Text('0'),
-          const Text('1'),
-          Container(
-            height: 100,
-            width: 50,
-            color: Colors.amber,
+          ListView.separated(
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
+            itemBuilder: (context, index) => Text(theList[index]),
+            separatorBuilder: (context, index) => const Divider(
+              color: Colors.teal,
+            ),
+            itemCount: theList.length,
           ),
-          const Text('0'),
-          const Text('1'),
-          Container(
-            height: 100,
-            width: 50,
-            color: Colors.amber,
-          ),
-          const Text('0'),
-          const Text('1'),
-          Container(
-            height: 100,
-            width: 50,
-            color: Colors.amber,
-          ),
-          const Text('0'),
-          const Text('1'),
-          Container(
-            height: 100,
-            width: 50,
-            color: Colors.amber,
-          ),
-          const Text('0'),
-          const Text('1'),
-          Container(
-            height: 100,
-            width: 50,
-            color: Colors.amber,
-          ),
-          const Text('0'),
-          const Text('1'),
-          Container(
-            height: 100,
-            width: 50,
-            color: Colors.amber,
-          ),
-          const Text('0'),
-          const Text('1'),
-          Container(
-            height: 100,
-            width: 50,
-            color: Colors.amber,
+          ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const pageThree()));
+              },
+              child: const Text('Page Three')
           ),
         ],
       ),
