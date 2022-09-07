@@ -19,18 +19,22 @@ class _pageThreeState extends State<pageThree> {
         title: const Text('Page Three'),
       ),
       body: Center(
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               height: 100,
-              width: 100,
-              decoration: const BoxDecoration(
-                color: Colors.red,
+              width: 160,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                    width: 3
+                ),
               ),
               child: TextButton(
                 child: const Center(
-                  child: Text('+',style: TextStyle(fontSize: 40,color: Colors.white),),
+                  child: Text('+',style: TextStyle(fontSize: 40,color: Colors.red),),
                 ),
                 onPressed: (){
                   setState(() {
@@ -53,11 +57,11 @@ class _pageThreeState extends State<pageThree> {
               height: 100,
               width: 100,
               decoration: const BoxDecoration(
-                color: Colors.blue,
+                color: Colors.lightGreenAccent,
               ),
               child: TextButton(
                 child: const Center(
-                  child: Text('-',style: TextStyle(fontSize: 40,color: Colors.white),),
+                  child: Text('-',style: TextStyle(fontSize: 40,color: Colors.black),),
                 ),
                 onPressed: (){
                   setState(() {
