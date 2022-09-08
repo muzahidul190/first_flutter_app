@@ -11,6 +11,10 @@ class inputFields extends StatefulWidget {
 
 class _inputFieldsState extends State<inputFields> {
   String username = 'no name';
+
+  List<String> dept = ['CSE', 'EEE', 'Civil', 'NAME'];
+  String? currentItem = 'CSE';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

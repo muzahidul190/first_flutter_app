@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/DayCalc.dart';
 import 'package:first_flutter_app/dialog.dart';
 import 'package:first_flutter_app/externalKit.dart';
 import 'package:first_flutter_app/inputFields.dart';
@@ -117,6 +118,13 @@ class MyHomePage extends StatelessWidget {
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const MyHomePage2()));
+            },
+          ),
+          ElevatedButton(
+            child: const Text('Day Calculator'),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const dayCalc()));
             },
           ),
           Expanded(
