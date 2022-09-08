@@ -18,7 +18,7 @@ class _externalKitState extends State<externalKit> {
       appBar: AppBar(
         title: const Text('Dialog Page'),
       ),
-      body: const SpinKitHourGlass(
+      body: const SpinKitCircle(
         color: Colors.red,
         size: 50.0,
       ),
