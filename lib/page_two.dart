@@ -9,6 +9,8 @@ class MyHomePage2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var cheight = 50;
+    var cwidth = 70;
     return Scaffold(
       appBar: AppBar(
         title: const Text('This is second Page'),
@@ -16,66 +18,67 @@ class MyHomePage2 extends StatelessWidget {
       body: Column(
         children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.green,
-                ),
-              ),
-              const Text('Hi'),
-              Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.teal,
-                ),
+                height: cheight.toDouble(),
+                width: cwidth.toDouble(),
+                color: Colors.purple,
               ),
               Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.blue,
+                height: cheight.toDouble(),
+                width: cwidth.toDouble(),
+                color: Colors.white,
+                child: const Center(
+                  child: Text('Hi'),
                 ),
-              )
+              ),
+              Column(
+                children: [
+                  Container(
+                    height: cheight.toDouble(),
+                    width: cwidth.toDouble(),
+                    color: Colors.indigo,
+                  ),
+                  Container(
+                    height: cheight.toDouble(),
+                    width: cwidth.toDouble(),
+                    color: Colors.white,
+                    child: const Center(
+                      child: Text('Hi'),
+                    ),
+                  ),
+                  Container(
+                    height: cheight.toDouble(),
+                    width: cwidth.toDouble(),
+                    color: Colors.teal,
+                  ),
+                  Container(
+                    height: cheight.toDouble(),
+                    width: cwidth.toDouble(),
+                    color: Colors.amberAccent,
+                  ),
+                ],
+              ),
+              Container(
+                height: cheight.toDouble(),
+                width: cwidth.toDouble(),
+                color: Colors.lightGreenAccent,
+              ),
             ],
           ),
-          Column(
-            children: [
-              const Text('Hi'),
-              Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.cyan,
-                ),
-              ),
-              Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.teal,
-                ),
-              ),
-            ],
+          ElevatedButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const MyHomePage()));
+            },
+            child: const Text('Home Page'),
           ),
-          Center(
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const MyHomePage()));
-              },
-              child: const Text('Go to HomePage'),
-            ),
+          ElevatedButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const pageThree()));
+            },
+            child: const Text('Page Three'),
           ),
-          Center(
-            child: ElevatedButton(
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const pageThree()));
-              },
-              child: const Text('Page Three'),
-            ),
-          )
         ],
       ),
     );
