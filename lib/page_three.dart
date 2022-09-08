@@ -24,19 +24,19 @@ class _pageThreeState extends State<pageThree> {
           children: [
             Container(
               height: 100,
-              width: 160,
+              width: 130,
               decoration: BoxDecoration(
                 color: Colors.blue,
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                    width: 3
-                ),
+                borderRadius: BorderRadius.circular(10),
               ),
               child: TextButton(
                 child: const Center(
-                  child: Text('+',style: TextStyle(fontSize: 40,color: Colors.red),),
+                  child: Text(
+                    '+',
+                    style: TextStyle(fontSize: 40, color: Colors.red),
+                  ),
                 ),
-                onPressed: (){
+                onPressed: () {
                   setState(() {
                     a++;
                   });
@@ -50,7 +50,10 @@ class _pageThreeState extends State<pageThree> {
                 color: Colors.white,
               ),
               child: Center(
-                child: Text(a.toString(),style: const TextStyle(fontSize: 40,color: Colors.black),),
+                child: Text(
+                  a.toString(),
+                  style: const TextStyle(fontSize: 40, color: Colors.black),
+                ),
               ),
             ),
             Container(
@@ -61,9 +64,12 @@ class _pageThreeState extends State<pageThree> {
               ),
               child: TextButton(
                 child: const Center(
-                  child: Text('-',style: TextStyle(fontSize: 40,color: Colors.black),),
+                  child: Text(
+                    '-',
+                    style: TextStyle(fontSize: 40, color: Colors.black),
+                  ),
                 ),
-                onPressed: (){
+                onPressed: () {
                   setState(() {
                     a--;
                   });
