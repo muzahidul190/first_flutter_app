@@ -1,6 +1,7 @@
-import 'package:first_flutter_app/page_two.dart';
-import 'package:first_flutter_app/page_three.dart';
 import 'package:first_flutter_app/dialog.dart';
+import 'package:first_flutter_app/externalKit.dart';
+import 'package:first_flutter_app/page_three.dart';
+import 'package:first_flutter_app/page_two.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -105,7 +106,6 @@ class MyHomePage extends StatelessWidget {
               leading: Icon(Icons.wifi),
               title: Text('Wifi'),
             ),
-
           ],
         ),
       ),
@@ -130,31 +130,41 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const pageThree()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const pageThree()));
               },
-              child: const Text('Page Three')
-          ),
+              child: const Text('Page Three')),
           ElevatedButton(
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const dialogPage()));
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const dialogPage()));
               },
-              child: const Text('Dialog Page')
-          ),
+              child: const Text('Dialog Page')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const externalKit()));
+              },
+              child: const Text('External Kit')),
           Container(
             height: 30,
             //padding: Padding(),
             decoration: const BoxDecoration(
               color: Colors.deepOrangeAccent,
-
             ),
             child: const Center(
               child: Text(
                 'This is test text',
-              style: TextStyle(
-                color: Colors.black,
+                style: TextStyle(
+                  color: Colors.black,
+                ),
               ),
-            ),),
+            ),
           ),
         ],
       ),
