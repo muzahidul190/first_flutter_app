@@ -15,15 +15,13 @@ class _dayCalcState extends State<dayCalc> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dialog Page'),
+        title: const Text('Day Calculator'),
       ),
       body: Column(
         children: [
           Row(
-            children: [
-              TextField(
-                textAlign: TextAlign.center,
-              ),
+            children: const [
+              Text('data'),
             ],
           ),
         ],
