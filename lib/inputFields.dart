@@ -14,11 +14,12 @@ class inputFields extends StatefulWidget {
 class _inputFieldsState extends State<inputFields> {
   String username = 'no name';
 
-  List<String> dept = ['CSE', 'EEE', 'Civil', 'NAME'];
+  static const List<String> _dept = ['CSE', 'EEE', 'Civil', 'NAME'];
+  String selectedDept = _dept.first;
   String? currentItem = 'CSE';
-  String _gender = 'No Gender Selected';
+  String? _gender = 'No Gender Selected';
 
-  void _genderRadio(String val) {
+  void _genderRadio(String? val) {
     setState(() {
       _gender = val;
     });
@@ -33,19 +34,16 @@ class _inputFieldsState extends State<inputFields> {
       body: Container(
         padding: const EdgeInsets.all(32),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Padding(
-                  padding: EdgeInsets.all(18.0),
-                  child: Text(
-                    'Enter Name:',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline),
-                  ),
+                const Text(
+                  'Enter Name:',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline),
                 ),
                 TextField(
                   onChanged: (value) {
@@ -55,7 +53,7 @@ class _inputFieldsState extends State<inputFields> {
                   },
                 ),
                 const Padding(
-                  padding: EdgeInsets.all(18.0),
+                  padding: EdgeInsets.only(top: 18.0),
                   child: Text(
                     'Select Gender:',
                     style: TextStyle(
@@ -101,6 +99,34 @@ class _inputFieldsState extends State<inputFields> {
                     ),
                   ],
                 ),
+                const Padding(
+                  padding: EdgeInsets.all(18.0),
+                  child: Text(
+                    'Select Department:',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline),
+                  ),
+                ),
+                DropdownButton(
+                  value: selectedDept,
+                  icon: const Icon(Icons.arrow_downward),
+                  elevation: 16,
+                  underline: Container(
+                    height: 2,
+                  ),
+                  onChanged: (String? value) {
+                    setState(() {
+                      selectedDept = value!;
+                    });
+                  },
+                  items: _dept.map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
               ],
             ),
             Container(
@@ -123,6 +149,7 @@ class _inputFieldsState extends State<inputFields> {
                   ),
                   Text('TextField: $username'),
                   Text('Radio Button: $_gender'),
+                  Text('DropDown Menu: $selectedDept'),
                 ],
               ),
             ),
