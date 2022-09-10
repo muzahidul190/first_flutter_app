@@ -1,6 +1,7 @@
 import 'package:first_flutter_app/DayCalc.dart';
 import 'package:first_flutter_app/dialog.dart';
 import 'package:first_flutter_app/externalKit.dart';
+import 'package:first_flutter_app/image.dart';
 import 'package:first_flutter_app/inputFields.dart';
 import 'package:first_flutter_app/page_three.dart';
 import 'package:first_flutter_app/page_two.dart';
@@ -168,6 +169,12 @@ class MyHomePage extends StatelessWidget {
                         builder: (context) => const inputFields()));
               },
               child: const Text('Input Field')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const imagePage()));
+              },
+              child: const Text('Image Page')),
           Container(
             height: 30,
             //padding: Padding(),
